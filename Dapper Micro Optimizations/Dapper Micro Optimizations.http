@@ -1,6 +1,0 @@
-@Dapper_Micro_Optimizations_HostAddress = http://localhost:5104
-
-GET {{Dapper_Micro_Optimizations_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
