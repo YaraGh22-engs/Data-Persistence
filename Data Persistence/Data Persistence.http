@@ -1,0 +1,6 @@
+@Data_Persistence_HostAddress = http://localhost:5020
+
+GET {{Data_Persistence_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

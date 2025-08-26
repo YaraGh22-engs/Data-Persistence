@@ -1,0 +1,43 @@
+@EF_Core_HostAddress = http://localhost:5100
+
+ 
+
+###
+@productId = 2779ee47-10b0-4bd7-8342-404006aa1392
+ 
+###
+GET {{EF_Core_HostAddress}}/api/products?page=1&pageSize=100
+
+###
+GET {{EF_Core_HostAddress}}/api/products/{{productId}}?includeReviews=true
+
+### 
+POST {{EF_Core_HostAddress}}/api/products
+Content-Type: application/json
+
+{
+  "name": "Keyboard",
+  "price": 34.99
+}
+
+
+###
+POST {{EF_Core_HostAddress}}/api/products/{{productId}}/reviews
+Content-Type: application/json
+
+{
+  "reviewer": "Kevin Kelo",
+  "stars": 3
+}
+
+### 
+PUT {{EF_Core_HostAddress}}/api/products/{{productId}}
+Content-Type: application/json
+
+{
+    "name": "chocolate bar",
+    "price": 3.50
+}
+
+### DELETE
+DELETE {{EF_Core_HostAddress}}/api/products/{{productId}}
